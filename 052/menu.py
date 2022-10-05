@@ -3,6 +3,7 @@ from turtle import width
 
 raiz = tk.Tk()
 raiz.config(width=300, height=300)
+
 barraMenu = tk.Menu(raiz)
 raiz.config(menu=barraMenu)
 
