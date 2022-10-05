@@ -1,8 +1,5 @@
-from queue import Empty
 import tkinter as tk
 from tkinter import messagebox
-
-from numpy import pad
 
 raiz = tk.Tk()
 raiz.title('Clientes')
@@ -70,18 +67,6 @@ entries['observaciones'].config(yscrollcommand=scrollVertical.set)
 entries['password'].config(show='●')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 # Creación de sub-menus
 bbddMenu = tk.Menu(barraMenu, tearoff=False)
 borrarMenu = tk.Menu(barraMenu, tearoff=False)
@@ -137,6 +122,7 @@ def create():
     atributos_cliente['id'].set(str(id))
 
 def read():
+    control_conexion()
     cursor = bbdd.read(database, leer_formulario()['id'])
     for row in cursor.fetchall():
         messagebox.showinfo('Información del cliente', row)
