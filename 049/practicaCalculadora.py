@@ -1,7 +1,5 @@
 import tkinter as tk
 
-from numpy import empty
-
 raiz = tk.Tk()
 
 miFrame = tk.Frame(raiz)
